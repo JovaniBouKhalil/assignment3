@@ -146,6 +146,52 @@ button:focus-visible {
     list-style: none;
 }
 
+.hidden {
+    display: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.task.done .task-text {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+.task button {
+    padding: 8px 12px;
+}
+
+.complete {
+    color: var(--accent);
+    background: #e9eff6;
+}
+
+.complete:hover {
+    background: #d8e3ef;
+}
+
+.delete {
+    color: #a32922;
+    background: #fbecea;
+}
+
+.delete:hover {
+    background: #f5d5d1;
+}
+
 /* Stack the input and button on smaller screens. */
 @media (max-width: 560px) {
     body {

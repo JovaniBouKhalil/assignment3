@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My To-Do List</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
     <main class="todo-app">
@@ -23,6 +24,7 @@
                     type="text"
                     placeholder="What do you need to do?"
                     autocomplete="off"
+                    aria-describedby="task-feedback"
                 >
                 <button type="submit">Add task</button>
             </div>
@@ -31,7 +33,7 @@
 
         <section class="tasks-section" aria-labelledby="tasks-heading">
             <h2 id="tasks-heading">Tasks</h2>
-            <p id="empty-message" class="empty-message">No tasks yet. Add one above!</p>
+            <p id="empty-message" class="empty-message">No tasks yet.</p>
             <!-- Task items will be added here by JavaScript. -->
             <ul id="task-list" class="task-list"></ul>
         </section>
