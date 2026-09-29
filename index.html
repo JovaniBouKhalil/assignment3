@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="todo-app">
+        <header class="app-header">
+            <h1>To-Do List</h1>
+            <p>Add, complete, and remove your tasks.</p>
+        </header>
+
+        <!-- JavaScript will handle blank input and show a message below. -->
+        <form id="task-form" class="task-form" novalidate>
+            <label for="task-input">New task</label>
+            <div class="input-row">
+                <input
+                    id="task-input"
+                    name="task"
+                    type="text"
+                    placeholder="What do you need to do?"
+                    autocomplete="off"
+                >
+                <button type="submit">Add task</button>
+            </div>
+            <p id="task-feedback" class="feedback" aria-live="polite"></p>
+        </form>
+
+        <section class="tasks-section" aria-labelledby="tasks-heading">
+            <h2 id="tasks-heading">Tasks</h2>
+            <p id="empty-message" class="empty-message">No tasks yet. Add one above!</p>
+            <!-- Task items will be added here by JavaScript. -->
+            <ul id="task-list" class="task-list"></ul>
+        </section>
+    </main>
+</body>
+</html>

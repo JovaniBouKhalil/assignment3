@@ -1,0 +1,166 @@
+/* Shared colors so they are easy to change later. */
+:root {
+    --accent: #385b83;
+    --accent-hover: #284362;
+    --text: #263344;
+    --muted: #606d7c;
+    --border: #d3dbe5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 48px 16px;
+    color: var(--text);
+    background: #edf0f4;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+/* Keep the list centered and stop it getting too wide. */
+.todo-app {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.app-header {
+    margin-bottom: 32px;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: var(--accent);
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.app-header p {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.task-form {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #f3f6fa;
+}
+
+.task-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.input-row {
+    display: flex;
+    gap: 8px;
+}
+
+.input-row input {
+    min-width: 0;
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #9aa9ba;
+    border-radius: 4px;
+    color: var(--text);
+}
+
+.input-row input:focus {
+    border-color: var(--accent);
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+button {
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 180ms ease;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.input-row button {
+    padding: 12px 24px;
+    color: #ffffff;
+    background: var(--accent);
+    font-weight: 700;
+}
+
+.input-row button:hover {
+    background: var(--accent-hover);
+}
+
+/* Leave room for an error message so the form doesnt jump. */
+.feedback {
+    min-height: 1.2em;
+    margin: 8px 0 0;
+    color: #b42318;
+    font-size: 0.9rem;
+}
+
+.tasks-section {
+    padding-top: 24px;
+}
+
+.tasks-section h2 {
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+}
+
+.empty-message {
+    margin: 0;
+    padding: 32px 16px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    text-align: center;
+}
+
+.task-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Stack the input and button on smaller screens. */
+@media (max-width: 560px) {
+    body {
+        padding: 24px 12px;
+    }
+
+    .todo-app {
+        padding: 24px;
+    }
+
+    .task-form {
+        padding: 16px;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+}
